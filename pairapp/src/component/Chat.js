@@ -6,7 +6,7 @@ import { FloatButton } from 'antd';
 // import RiSendPlane2Fill from 'react-icons/ri'
 
 
-const socket = io('http://localhost:4000')
+const socket = io('https://pair-up.onrender.com')
 function Chat() {
     const [message,setMessage] = useState('')
     const [chatmessage,setChatmessage] = useState([])

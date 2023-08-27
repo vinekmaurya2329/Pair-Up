@@ -24,7 +24,7 @@ function CreateEvent() {
         formdata.append('address',address)
         formdata.append('tag',tag)
         const data  =  formdata;
-        await axios.post('http://localhost:4000/api/events/createvent',data)
+        await axios.post('https://pair-up.onrender.com/api/events/createvent',data)
         .then((res)=>console.log(res))
         .catch(e=>console.log(e))
           Swal.fire('Congrats','Events Posted SuccessFully','success');

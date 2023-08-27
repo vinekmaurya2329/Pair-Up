@@ -10,7 +10,7 @@ function Register() {
     const [cpassword,setCpassword]=useState('')
     const [bio,setBio] = useState('')
     const [image,setImage] = useState(null)
-   const url = 'http://localhost:4000';
+   const url = 'https://pair-up.onrender.com';
    
    async function submitHandler(e){
     e.preventDefault()
@@ -24,7 +24,7 @@ function Register() {
     
     
 try {
-  const result = await axios.post('http://localhost:4000/api/users/register',userData)
+  const result = await axios.post('https://pair-up.onrender.com/api/users/register',userData)
   console.log(result)
   Swal.fire('congrats',result.data.message,'success');
   window.location.href = '/login';

@@ -43,7 +43,7 @@ console.log(updateUser)
      if(id){
       async function fetchData(){
      setLoader(true)
-        const updatedUser =  await axios.get(`http://localhost:4000/api/users/getuser/${id}`)
+        const updatedUser =  await axios.get(`https://pair-up.onrender.com/api/users/getuser/${id}`)
        console.log(updatedUser)
        setLoader(false)
        setUpdateUser(updatedUser.data.result)
@@ -68,7 +68,7 @@ console.log(updateUser)
 //  formdata.append('image',image)
 const data ={name:name,email:email,number:number,user:user,bio:bio} 
 // const data = formdata;
- await axios.put(`http://localhost:4000/api/users/updateprofile`,data) 
+ await axios.put(`https://pair-up.onrender.com/api/users/updateprofile`,data) 
 Swal.fire('congrats','Profile Updated successfully','success')
 
         setIsModalOpen(false);

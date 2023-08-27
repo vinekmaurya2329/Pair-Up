@@ -33,7 +33,7 @@ async function submitLogin(){
   
     const loginData = {email,password}
     try {
-        const user = await axios.post('http://localhost:4000/api/users/login',loginData)
+        const user = await axios.post('https://pair-up.onrender.com/api/users/login',loginData)
         
         // console.log(userinfo)
         console.log(user.data.success)

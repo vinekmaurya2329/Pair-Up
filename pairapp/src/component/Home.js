@@ -33,7 +33,7 @@ if(user==null){
          
      try {
       setLoader(true)
-        const  data = await axios.get('http://localhost:4000/api/posts/getpost')
+        const  data = await axios.get('https://pair-up.onrender.com/api/posts/getpost')
         setResult(data)
         setLoader(false)
         console.log(data)
@@ -50,7 +50,7 @@ if(user==null){
          <Navbar/> { loader && <Loader/>}
         {result.data && result.data.map((item, index) => {
            return <div className="card mb-3 container bs">
-  <img src={`http://localhost:4000/images/${item.image}`} className="card-img-top card-img" alt="..." /> <Link to={'/chat'}><button className='btn btn-dark chat-btn'  >Message</button></Link>
+  <img src={`https://pair-up.onrender.com/images/${item.image}`} className="card-img-top card-img" alt="..." /> <Link to={'/chat'}><button className='btn btn-dark chat-btn'  >Message</button></Link>
   <button className='btn btn-dark details-btn' onClick={showModal}> Details</button>
   <div className="card-body">
     <h5 className="card-title"></h5>

@@ -24,7 +24,7 @@ function CreatePost() {
 //   function handleSubmit(){
 //     const data = {description:description,rent:rent,address:address,formdata:formdata}
 //     console.log(formdata)
-//    axios.post('http://localhost:4000/api/posts/createpost',data)
+//    axios.post('https://pair-up.onrender.com/api/posts/createpost',data)
 //  .then((res)=>console.log(res))
 //  .catch((err)=>console.log(err))
  
@@ -45,7 +45,7 @@ function handleSubmit(){
     formdata.append('profession',profession)
        // console.log(formdata)
        const data  = formdata;
-     axios.post('http://localhost:4000/api/posts/createpost',data)
+     axios.post('https://pair-up.onrender.com/api/posts/createpost',data)
    .then((res)=>{
     Swal.fire('congrats','Post created Successfully','success')
    })
@@ -54,7 +54,8 @@ function handleSubmit(){
   return (
     <>
     <Navbar/>
-    <div className='container post-body mt-4 mb-4'>
+    <div className="post-main">
+    <div className='container post-body  mb-4'>
       
 <h3 className='mb-2' style={{fontFamily:'cursive'}}> Create a Post to find flatmate</h3>
 <hr className="border border-dark border-1 opacity-75"></hr>
@@ -101,6 +102,7 @@ function handleSubmit(){
   </div>
 
   <button className='btn btn-dark mb-3' onClick={handleSubmit}> submit</button>
+    </div>
     </div>
     </>
   )
