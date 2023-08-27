@@ -10,10 +10,13 @@ const socket = io('https://pair-up.onrender.com')
 function Chat() {
     const [message,setMessage] = useState('')
     const [chatmessage,setChatmessage] = useState([])
-
+const user = JSON.parse(localStorage.getItem('currentUser'))
     const username = JSON.parse(localStorage.getItem('currentUser'))
     const scrollRef = useRef()
- 
+ if(user == null){
+  window.location.href ='/login'
+ }
+
     useEffect(()=>{
  if(scrollRef.current){
  scrollRef.current.scrollTop = scrollRef.current.scrollHeight;

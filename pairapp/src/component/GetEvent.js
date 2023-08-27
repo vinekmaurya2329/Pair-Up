@@ -24,6 +24,9 @@ function GetEvent() {
         if(click ==false){
           setLike(like+1)
           setClick(true)
+        }else{
+          setLike(like-1)
+          setClick(false)
         }
         
     }
@@ -62,11 +65,11 @@ function GetEvent() {
          
           <div className='inline'>
              
-            <div className="like" onClick={likeFun}><SlLike/> <small className='small-text'>{like} Likes</small></div>
+            <div className={'' + (click ? 'text-primary':'') } onClick={likeFun}><SlLike/> <small className='small-text'>{like} Likes</small></div>
             <div className="chat"><Link to={'/chat'}><TbMessage2/></Link><small className='small-text'>Chat</small></div>
           </div>
         </div>
-      </div>
+      </div> 
     })
    }
 
